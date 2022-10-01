@@ -1,0 +1,61 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "RenG",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#reserved_words"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.reng",
+				"match": "\\b(if|elif|else|while|for|def|return|screen|style|label|transform|imagebutton|textbutton|image|text|limitWidth|at|as|action|show|hide|play|stop|jump|call|menu|xsize|ysize|xpos|ypos|alpha)\\b"
+			}]
+		},
+		"reserved_words":{
+			"patterns": [{
+				"name":"keyword.other",
+				"match": "\\b(config_title|config_width|config_height|config_font|config_icon|start|main_menu|say|choice|who|what|items)\\b"
+			}]
+		},
+		"functions":{
+			"patterns": [{
+				"name":"entity.name.function",
+				"match": "\\b[\\w\\d_]+(?=\\s*\\()"
+			}]
+		},
+		"numbers":{
+			"patterns": [{
+				"name":"constant.numeric",
+				"match": "\\b(\\d+(\\.[0-9]+)?|\\.[0-9]+)([eE][+-]?[0-9]+)?"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.reng",
+			"begin": "\"",
+			"end": "\""
+		},
+		"comment": {
+			"name":"comment.line.reng",
+			"begin": "#",
+			"end": "\\n"
+		}
+	},
+	"scopeName": "source.rgo"
+}

@@ -1,0 +1,34 @@
+{
+    "name": "reng",
+    "displayName": "RenG",
+    "description": "Syntax highlighting for RenG",
+    "version": "0.0.4",
+    "publisher": "alvin1007",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "reng",
+                "aliases": ["RenG", "reng"],
+                "extensions": [".rgo"],
+                "configuration": "./language-configuration.json",
+                "icon": {
+                    "light": "./icons/icon.png",
+                    "dark": "./icons/icon.png"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "reng",
+                "scopeName": "source.rgo",
+                "path": "./syntaxes/reng.tmLanguage.json"
+            }
+        ]
+    }
+}
